@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.3">
+<title>Candidatos y militancia política | Elecciones 2025</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_observablehq/theme-air,near-midnight,wide.c63905c0.css">
+<link rel="preload" as="style" href="./_observablehq/stdlib/inputs.ea9fd553.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_observablehq/theme-air,near-midnight,wide.c63905c0.css">
+<link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.ea9fd553.css">
+<link rel="modulepreload" href="./_observablehq/client.e97d8e08.js">
+<link rel="modulepreload" href="./_observablehq/runtime.e080113b.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.24b62b2e.js">
+<link rel="modulepreload" href="./_import/components/candidatos.2d0eafdd.js">
+<link rel="modulepreload" href="./_import/components/process.d3d4fe64.js">
+<link rel="modulepreload" href="./_npm/d3@7.9.0/e780feca.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/inputs.b5a86791.js">
+<link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.17/d761ef9b.js">
+<link rel="modulepreload" href="./_import/components/load.5d28e15d.js">
+<link rel="modulepreload" href="./_npm/htl@0.3.1/72f4716c.js">
+<link rel="modulepreload" href="./_npm/hyparquet@1.17.1/bab1c68c.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/18cbf477.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/e93ca09f.js">
+<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/0f2de24d.js">
+<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/65eb105b.js">
+<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/7ef8fb2e.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/aeb57b94.js">
+<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/1d2aed74.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/5ced1d52.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/9ba9c7f3.js">
+<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/4202580c.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/9cffc2bd.js">
+<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/cdd7e898.js">
+<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/b4e2ad9a.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/5e804d15.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.0/86074ef6.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.1/40599fb3.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/e49e792c.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/8d1e5425.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/20d3f133.js">
+<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/7553081f.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/0dfd751c.js">
+<link rel="modulepreload" href="./_npm/d3-random@3.0.1/3c90ee06.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/843b6a76.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.1.0/ba24c2e7.js">
+<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/4d94e5b7.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/6d3a6726.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/9f03c579.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/07c9626f.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/b58a267d.js">
+<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/004da2ac.js">
+<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/b5786b3f.js">
+<link rel="modulepreload" href="./_npm/interval-tree-1d@1.0.4/53fe8176.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/e08981d9.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.0.1/02d43215.js">
+<link rel="modulepreload" href="./_npm/binary-search-bounds@2.0.5/cbf6ba23.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.2/aa00730b.js">
+<link rel="icon" href="https://mauforonda.github.io/images/icon.svg" type="image/png">
+<script type="module">
+
+import {define} from "./_observablehq/client.e97d8e08.js";
+
+define({id: "96e2a07e", inputs: ["Generators"], outputs: ["dark"], body: (Generators) => {
+// detect dark theme to adjust some colors
+const dark = Generators.observe((notify) => {
+  const mql = window.matchMedia("(prefers-color-scheme: dark)");
+  const update = () => notify(mql.matches);
+
+  update(); // initial value
+  mql.addEventListener("change", update);
+
+  return () => mql.removeEventListener("change", update);
+});
+return {dark};
+}});
+
+define({id: "94f0f8bb", inputs: ["dark"], outputs: ["colors","sinMilitancia","mas","mas_listas"], body: (dark) => {
+// Algunas constantes
+const colors = {
+  frame: dark ? "#d0d4d6ff" : "#39484d",
+  highlight: dark ? "#ff3232ff" : "#ff0000ff",
+};
+const sinMilitancia = "Ninguno";
+const mas =
+  "MOVIMIENTO AL SOCIALISMO INSTRUMENTO POLITICO POR LA SOBERANIA DE LOS PUEBLOS";
+const mas_listas =
+  "MOVIMIENTO AL SOCIALISMO INSTRUMENTO POLITICO POR LA SOBERANIA DE LOS PUEBLOS (MAS-IPSP)";
+return {colors,sinMilitancia,mas,mas_listas};
+}});
+
+define({id: "29469327", outputs: ["candidatos","mensajeNingunos","mensajeMilitancias","displayCandidato","aggregate_sort","format"], body: async () => {
+const [{candidatos, mensajeNingunos, mensajeMilitancias, displayCandidato}, {aggregate_sort}, {format}] = await Promise.all([import("./_import/components/candidatos.2d0eafdd.js"), import("./_import/components/process.d3d4fe64.js"), import("./_npm/d3@7.9.0/e780feca.js")]);
+// Dependencias
+
+return {candidatos,mensajeNingunos,mensajeMilitancias,displayCandidato,aggregate_sort,format};
+}});
+
+define({id: "4f8af580", inputs: ["candidatos"], outputs: ["opciones"], body: (candidatos) => {
+// Valores únicos
+const opciones = Object.fromEntries(
+  [
+    "candidatura_listas",
+    "partido_listas",
+    "departamento_listas",
+    "genero_listas",
+    "partido_padron",
+  ].map((i) => [i, Array.from(new Set(candidatos.map((c) => c[i])))])
+);
+return {opciones};
+}});
+
+define({id: "457bd866", inputs: ["Inputs","opciones","Generators"], outputs: ["candidatura_listas_input","candidatura_listas"], body: (Inputs,opciones,Generators) => {
+// Menú de tipos de candidaturas
+const candidatura_listas_input = Inputs.select(
+  [...["Todas"], ...opciones.candidatura_listas],
+  {
+    label: "Candidatura",
+  }
+);
+const candidatura_listas = Generators.input(candidatura_listas_input);
+return {candidatura_listas_input,candidatura_listas};
+}});
+
+define({id: "678e45a5", inputs: ["candidatos","candidatura_listas","partido"], outputs: ["filtered"], body: (candidatos,candidatura_listas,partido) => {
+// Filtro para la vista de candidatos en detalle
+const filtered = candidatos.filter(
+  (c) =>
+    (candidatura_listas != "Todas"
+      ? c.candidatura_listas == candidatura_listas
+      : candidatura_listas) && c.partido_padron == partido
+);
+return {filtered};
+}});
+
+define({id: "c114d06f", inputs: ["aggregate_sort","candidatos","sinMilitancia"], outputs: ["militancias_completo","militancias"], body: (aggregate_sort,candidatos,sinMilitancia) => {
+// Conteo de candidatos por partidos de militancia
+const militancias_completo = aggregate_sort(candidatos, "partido_padron");
+const militancias = aggregate_sort(
+  candidatos.filter((c) => c.partido_padron != sinMilitancia),
+  "partido_padron"
+);
+return {militancias_completo,militancias};
+}});
+
+define({id: "a4fd86ba", inputs: ["candidatos","militancias_completo","sinMilitancia","militancias","mas","mas_listas"], outputs: ["keyValues"], body: (candidatos,militancias_completo,sinMilitancia,militancias,mas,mas_listas) => {
+// Valores para mensajes de reporte
+const keyValues = {
+  candidatos_count: candidatos.length,
+  militantes_count:
+    candidatos.length - militancias_completo.keys[sinMilitancia].count,
+  militantes_percent: 1 - militancias_completo.keys[sinMilitancia].percent,
+  mas_count: militancias.keys[mas].count,
+  mas_percent: militancias.keys[mas].percent,
+  mas_outside: candidatos.filter(
+    (c) => c.partido_padron == mas && c.partido_listas != mas_listas
+  ).length,
+};
+return {keyValues};
+}});
+
+define({id: "0fc0ad5d", inputs: ["Plot","width","colors","militancias_completo","sinMilitancia","Generators"], outputs: ["plotNingunaMilitancia","plotNingunaMilitancia_value"], body: (Plot,width,colors,militancias_completo,sinMilitancia,Generators) => {
+// Gráfico de militancias, incluyendo candidatos sin militancia
+const plotNingunaMilitancia = Plot.plot({
+  title: "Número de candidatos por militancia",
+  subtitle: "incluyendo aquellos sin militancia",
+  marginBottom: 5,
+  height: 30,
+  width: width,
+  x: {
+    axis: null,
+  },
+  y: {
+    axis: null,
+  },
+  style: {
+    color: colors.frame,
+  },
+  marks: [
+    Plot.barX(militancias_completo.array, {
+      x: "count",
+      fillOpacity: (d) => (d.partido_padron == sinMilitancia ? 0.1 : 0.5),
+      inset: 1,
+    }),
+    Plot.barX([militancias_completo.keys[sinMilitancia]], {
+      x: "count",
+      fillOpacity: 0.1,
+      inset: 1,
+      insetBottom: -20,
+      insetTop: 27,
+    }),
+    Plot.barX(
+      militancias_completo.array,
+      Plot.pointerX({
+        x: "count",
+        fillOpacity: (d) => (d.partido_padron == sinMilitancia ? 0 : 0.5),
+        inset: 1,
+        insetBottom: -20,
+        insetTop: 27,
+      })
+    ),
+    Plot.text([militancias_completo.keys.Ninguno], {
+      text: (d) => "sin militancia",
+      x: 0,
+      textAnchor: "start",
+      dx: 8,
+      fillOpacity: 0.7,
+    }),
+  ],
+});
+const plotNingunaMilitancia_value = Generators.input(plotNingunaMilitancia);
+return {plotNingunaMilitancia,plotNingunaMilitancia_value};
+}});
+
+define({id: "1cb4677d", inputs: ["Plot","width","colors","militancias","mas","Generators"], outputs: ["plotMilitancias","plotMilitancias_value"], body: (Plot,width,colors,militancias,mas,Generators) => {
+// Gráfico de militancias, sólo con candidatos militantes
+const plotMilitancias = Plot.plot({
+  title: "Número de candidatos por militancia",
+  subtitle: "entre sólo aquellos que declaran alguna militancia",
+  marginBottom: 5,
+  height: 30,
+  width: width,
+  x: {
+    axis: null,
+  },
+  y: {
+    axis: null,
+  },
+  style: {
+    color: colors.frame,
+  },
+  marks: [
+    Plot.barX(militancias.array, {
+      x: "count",
+      fillOpacity: 0.5,
+      inset: 1,
+    }),
+    Plot.barX([militancias.keys[mas]], {
+      x: "count",
+      fill: colors.highlight,
+      fillOpacity: 0.2,
+      inset: 1,
+      insetBottom: -20,
+      insetTop: 27,
+    }),
+    Plot.barX(
+      militancias.array,
+      Plot.pointerX({
+        x: "count",
+        fill: colors.highlight,
+        fillOpacity: (d) => (d.partido_padron == mas ? 0 : 0.5),
+        inset: 1,
+        insetBottom: -20,
+        insetTop: 27,
+      })
+    ),
+  ],
+});
+const plotMilitancias_value = Generators.input(plotMilitancias);
+return {plotMilitancias,plotMilitancias_value};
+}});
+
+define({id: "0189ef76", inputs: ["plotMilitancias_value","mas"], outputs: ["partido"], body: (plotMilitancias_value,mas) => {
+// Partido de militancia seleccionado
+const partido = plotMilitancias_value
+  ? plotMilitancias_value.partido_padron
+  : mas;
+return {partido};
+}});
+
+define({id: "37157c70", inputs: ["Plot","width","colors","candidatos","filtered","Generators"], outputs: ["plotDetalle","selection"], body: (Plot,width,colors,candidatos,filtered,Generators) => {
+// Gráfico de cada candidato en detalle
+const plotDetalle = Plot.plot({
+  title: "Cada candidato en carrera",
+  subtitle: "según el partido por el que postula",
+  margin: 0,
+  height: 500,
+  width: width,
+  x: {
+    axis: null,
+  },
+  y: {
+    axis: null,
+  },
+  style: {
+    color: colors.frame,
+  },
+  marks: [
+    Plot.axisY({
+      textAnchor: "start",
+      lineAnchor: "bottom",
+      label: null,
+      fillOpacity: 0.8,
+      tickSize: 0,
+      fontWeight: "normal",
+      dx: 8,
+      dy: -7,
+    }),
+    Plot.tickX(candidatos, {
+      filter: (c) => !filtered.includes(c),
+      x: "i",
+      y: "partido_listas",
+      strokeOpacity: 0.5,
+      insetTop: 25,
+      insetBottom: 0,
+      sort: {
+        y: "x",
+        reverse: true,
+      },
+    }),
+    Plot.tickX(filtered, {
+      x: "i",
+      y: "partido_listas",
+      stroke: colors.highlight,
+      strokeOpacity: 0.5,
+      strokeWidth: 1.5,
+      insetTop: 24,
+      insetBottom: -1,
+      sort: {
+        y: "x",
+        reverse: true,
+      },
+    }),
+    Plot.tickX(
+      filtered,
+      Plot.pointer({
+        x: "i",
+        y: "partido_listas",
+        stroke: colors.highlight,
+        strokeWidth: 1.5,
+        strokeOpacity: 1,
+        insetTop: 24,
+        insetBottom: -1,
+        sort: {
+          y: "x",
+          reverse: true,
+        },
+      })
+    ),
+  ],
+});
+
+const selection = Generators.input(plotDetalle);
+return {plotDetalle,selection};
+}});
+
+define({id: "80c72881", mode: "inline", inputs: ["keyValues","display"], body: async (keyValues,display) => {
+display(await(
+keyValues.candidatos_count
+))
+}});
+
+define({id: "6f27c2dc", mode: "inline", inputs: ["keyValues","display"], body: async (keyValues,display) => {
+display(await(
+keyValues.militantes_count
+))
+}});
+
+define({id: "2ed641d7", mode: "inline", inputs: ["format","keyValues","display"], body: async (format,keyValues,display) => {
+display(await(
+format(".2%")(keyValues.militantes_percent)
+))
+}});
+
+define({id: "749eb47e", mode: "inline", inputs: ["plotNingunaMilitancia","display"], body: async (plotNingunaMilitancia,display) => {
+display(await(
+plotNingunaMilitancia
+))
+}});
+
+define({id: "03e91f45", mode: "inline", inputs: ["mensajeNingunos","plotNingunaMilitancia_value","militancias_completo","sinMilitancia","display"], body: async (mensajeNingunos,plotNingunaMilitancia_value,militancias_completo,sinMilitancia,display) => {
+display(await(
+mensajeNingunos(plotNingunaMilitancia_value, militancias_completo.keys.Ninguno, sinMilitancia)
+))
+}});
+
+define({id: "98b3aa6c", mode: "inline", inputs: ["keyValues","display"], body: async (keyValues,display) => {
+display(await(
+keyValues.mas_count
+))
+}});
+
+define({id: "00e9b651", mode: "inline", inputs: ["format","keyValues","display"], body: async (format,keyValues,display) => {
+display(await(
+format(".2%")(keyValues.mas_percent)
+))
+}});
+
+define({id: "a80e1b6b", mode: "inline", inputs: ["keyValues","display"], body: async (keyValues,display) => {
+display(await(
+keyValues.mas_outside
+))
+}});
+
+define({id: "9ee7b799", mode: "inline", inputs: ["plotMilitancias","display"], body: async (plotMilitancias,display) => {
+display(await(
+plotMilitancias
+))
+}});
+
+define({id: "8e412593", mode: "inline", inputs: ["mensajeMilitancias","plotMilitancias_value","militancias","mas","display"], body: async (mensajeMilitancias,plotMilitancias_value,militancias,mas,display) => {
+display(await(
+mensajeMilitancias(plotMilitancias_value, militancias.keys[mas])
+))
+}});
+
+define({id: "a6aea591", mode: "inline", inputs: ["candidatura_listas_input","display"], body: async (candidatura_listas_input,display) => {
+display(await(
+candidatura_listas_input
+))
+}});
+
+define({id: "2113d045", mode: "inline", inputs: ["plotDetalle","display"], body: async (plotDetalle,display) => {
+display(await(
+plotDetalle
+))
+}});
+
+define({id: "508dbe43", mode: "inline", inputs: ["displayCandidato","selection","display"], body: async (displayCandidato,selection,display) => {
+display(await(
+displayCandidato(selection)
+))
+}});
+
+</script>
+</head>
+<body>
+<div id="observablehq-center">
+<main id="observablehq-main" class="observablehq">
+<link rel="stylesheet" href="./_file/style.976d1715.css">
+<div class="observablehq observablehq--block"><!--:96e2a07e:--></div>
+<div class="observablehq observablehq--block"><!--:94f0f8bb:--></div>
+<div class="observablehq observablehq--block"><!--:29469327:--></div>
+<div class="observablehq observablehq--block"><!--:4f8af580:--></div>
+<div class="observablehq observablehq--block"><!--:457bd866:--></div>
+<div class="observablehq observablehq--block"><!--:678e45a5:--></div>
+<div class="observablehq observablehq--block"><!--:c114d06f:--></div>
+<div class="observablehq observablehq--block"><!--:a4fd86ba:--></div>
+<div class="observablehq observablehq--block"><!--:0fc0ad5d:--></div>
+<div class="observablehq observablehq--block"><!--:1cb4677d:--></div>
+<div class="observablehq observablehq--block"><!--:0189ef76:--></div>
+<div class="observablehq observablehq--block"><!--:37157c70:--></div>
+<h1 id="candidatos-y-militancia-politica" tabindex="-1"><a class="observablehq-header-anchor" href="#candidatos-y-militancia-politica">Candidatos y militancia política</a></h1>
+<h2 id="con-informacion-actualizada-del-padron-electoral" tabindex="-1"><a class="observablehq-header-anchor" href="#con-informacion-actualizada-del-padron-electoral">Con información actualizada del padrón electoral</a></h2>
+<p>Una expresión de la actual crisis de representación política es la poca relación entre los partidos con los que candidatos electorales postulan y aquellos donde dicen militar.</p>
+<p>De <observablehq-loading></observablehq-loading><!--:80c72881:--> candidatos a las elecciones generales 2025, sólo <observablehq-loading></observablehq-loading><!--:6f27c2dc:--> (<observablehq-loading></observablehq-loading><!--:2ed641d7:-->) están inscritos como militantes de algún partido.</p>
+<div class="card grafico ninguna_militancia">
+  <observablehq-loading></observablehq-loading><!--:749eb47e:-->
+  <p class="mensaje">
+    <observablehq-loading></observablehq-loading><!--:03e91f45:-->
+  </p>
+</div>
+<p>Y entre ellos, <observablehq-loading></observablehq-loading><!--:98b3aa6c:--> (<observablehq-loading></observablehq-loading><!--:00e9b651:-->) son militantes del MAS-IPSP, incluyendo a <observablehq-loading></observablehq-loading><!--:a80e1b6b:--> que ahora postulan bajo otros partidos.</p>
+<div class="card grafico militancias">
+  <observablehq-loading></observablehq-loading><!--:9ee7b799:-->
+  <p class="mensaje">
+    <observablehq-loading></observablehq-loading><!--:8e412593:-->
+  </p>
+</div>
+<p>Quiénes son y dónde postulan?</p>
+<div class="menu">
+  <observablehq-loading></observablehq-loading><!--:a6aea591:-->
+</div>
+<div class="card grafico detalle">
+    <observablehq-loading></observablehq-loading><!--:2113d045:-->
+</div>
+<p><observablehq-loading></observablehq-loading><!--:508dbe43:--></p>
+<div class="footer">
+  Puedes descargar los datos y consultar cómo exactamente fueron producidos en el <a href="https://github.com/mauforonda/elecciones2025" target="_blank" rel="noopener noreferrer">repositorio en github</a>. Éste es un proyecto de <a href="https://mauforonda.github.io" target="_blank" rel="noopener noreferrer">Mauricio Foronda</a>.
+</div>
+</main>
+</div>
+</body>
+</html>
