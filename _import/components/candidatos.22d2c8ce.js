@@ -54,11 +54,15 @@ export function mensajeMilitancias(selection, default_values) {
       i.percent
     )} de los candidatos militantes)`;
   };
-  const default_message = `${amounts(default_values)} registrados en ${
+  const default_message = html`${amounts(
+    default_values
+  )} registrados en <span class="text_highlight">${
     default_values.partido_padron
-  }`;
+  }</span>`;
   if (selection) {
-    return `${amounts(selection)} registrados en ${selection.partido_padron}`;
+    return html`${amounts(selection)} registrados en <span class="text_highlight">${
+      selection.partido_padron
+    }</span>`;
   } else {
     return default_message;
   }

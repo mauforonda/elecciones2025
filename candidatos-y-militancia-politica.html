@@ -7,15 +7,15 @@
 <title>Candidatos y militancia política | Elecciones 2025</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="preload" as="style" href="./_observablehq/theme-air,near-midnight,wide.c63905c0.css">
+<link rel="preload" as="style" href="./_observablehq/theme-air,near-midnight.dcdbf18e.css">
 <link rel="preload" as="style" href="./_observablehq/stdlib/inputs.ea9fd553.css">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
-<link rel="stylesheet" type="text/css" href="./_observablehq/theme-air,near-midnight,wide.c63905c0.css">
+<link rel="stylesheet" type="text/css" href="./_observablehq/theme-air,near-midnight.dcdbf18e.css">
 <link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.ea9fd553.css">
 <link rel="modulepreload" href="./_observablehq/client.e97d8e08.js">
 <link rel="modulepreload" href="./_observablehq/runtime.e080113b.js">
 <link rel="modulepreload" href="./_observablehq/stdlib.24b62b2e.js">
-<link rel="modulepreload" href="./_import/components/candidatos.2d0eafdd.js">
+<link rel="modulepreload" href="./_import/components/candidatos.22d2c8ce.js">
 <link rel="modulepreload" href="./_import/components/process.d3d4fe64.js">
 <link rel="modulepreload" href="./_npm/d3@7.9.0/e780feca.js">
 <link rel="modulepreload" href="./_observablehq/stdlib/inputs.b5a86791.js">
@@ -78,11 +78,11 @@ const dark = Generators.observe((notify) => {
 return {dark};
 }});
 
-define({id: "94f0f8bb", inputs: ["dark"], outputs: ["colors","sinMilitancia","mas","mas_listas"], body: (dark) => {
+define({id: "e3fe7daa", inputs: ["dark"], outputs: ["colors","sinMilitancia","mas","mas_listas"], body: (dark) => {
 // Algunas constantes
 const colors = {
-  frame: dark ? "#d0d4d6ff" : "#39484d",
-  highlight: dark ? "#ff3232ff" : "#ff0000ff",
+  frame: dark ? "#b2b7baff" : "#39484d",
+  highlight: dark ? "#ffffffff" : "#116379ff",
 };
 const sinMilitancia = "Ninguno";
 const mas =
@@ -93,7 +93,7 @@ return {colors,sinMilitancia,mas,mas_listas};
 }});
 
 define({id: "29469327", outputs: ["candidatos","mensajeNingunos","mensajeMilitancias","displayCandidato","aggregate_sort","format"], body: async () => {
-const [{candidatos, mensajeNingunos, mensajeMilitancias, displayCandidato}, {aggregate_sort}, {format}] = await Promise.all([import("./_import/components/candidatos.2d0eafdd.js"), import("./_import/components/process.d3d4fe64.js"), import("./_npm/d3@7.9.0/e780feca.js")]);
+const [{candidatos, mensajeNingunos, mensajeMilitancias, displayCandidato}, {aggregate_sort}, {format}] = await Promise.all([import("./_import/components/candidatos.22d2c8ce.js"), import("./_import/components/process.d3d4fe64.js"), import("./_npm/d3@7.9.0/e780feca.js")]);
 // Dependencias
 
 return {candidatos,mensajeNingunos,mensajeMilitancias,displayCandidato,aggregate_sort,format};
@@ -271,7 +271,7 @@ const partido = plotMilitancias_value
 return {partido};
 }});
 
-define({id: "37157c70", inputs: ["Plot","width","colors","candidatos","filtered","Generators"], outputs: ["plotDetalle","selection"], body: (Plot,width,colors,candidatos,filtered,Generators) => {
+define({id: "ef5097f3", inputs: ["Plot","width","colors","candidatos","filtered","Generators"], outputs: ["plotDetalle","selection"], body: (Plot,width,colors,candidatos,filtered,Generators) => {
 // Gráfico de cada candidato en detalle
 const plotDetalle = Plot.plot({
   title: "Cada candidato en carrera",
@@ -315,7 +315,7 @@ const plotDetalle = Plot.plot({
       x: "i",
       y: "partido_listas",
       stroke: colors.highlight,
-      strokeOpacity: 0.5,
+      strokeOpacity: 0.6,
       strokeWidth: 1.5,
       insetTop: 24,
       insetBottom: -1,
@@ -430,9 +430,9 @@ displayCandidato(selection)
 <body>
 <div id="observablehq-center">
 <main id="observablehq-main" class="observablehq">
-<link rel="stylesheet" href="./_file/style.976d1715.css">
+<link rel="stylesheet" href="./_file/style.19973550.css">
 <div class="observablehq observablehq--block"><!--:96e2a07e:--></div>
-<div class="observablehq observablehq--block"><!--:94f0f8bb:--></div>
+<div class="observablehq observablehq--block"><!--:e3fe7daa:--></div>
 <div class="observablehq observablehq--block"><!--:29469327:--></div>
 <div class="observablehq observablehq--block"><!--:4f8af580:--></div>
 <div class="observablehq observablehq--block"><!--:457bd866:--></div>
@@ -442,7 +442,7 @@ displayCandidato(selection)
 <div class="observablehq observablehq--block"><!--:0fc0ad5d:--></div>
 <div class="observablehq observablehq--block"><!--:1cb4677d:--></div>
 <div class="observablehq observablehq--block"><!--:0189ef76:--></div>
-<div class="observablehq observablehq--block"><!--:37157c70:--></div>
+<div class="observablehq observablehq--block"><!--:ef5097f3:--></div>
 <h1 id="candidatos-y-militancia-politica" tabindex="-1"><a class="observablehq-header-anchor" href="#candidatos-y-militancia-politica">Candidatos y militancia política</a></h1>
 <h2 id="con-informacion-actualizada-del-padron-electoral" tabindex="-1"><a class="observablehq-header-anchor" href="#con-informacion-actualizada-del-padron-electoral">Con información actualizada del padrón electoral</a></h2>
 <p>Una expresión de la actual crisis de representación política es la poca relación entre los partidos con los que candidatos electorales postulan y aquellos donde dicen militar.</p>
