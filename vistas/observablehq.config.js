@@ -6,6 +6,6 @@ export default {
   toc: false,
   sidebar: false,
   pager: false,
-  theme: "wide",
+  theme: "default",
   footer: "",
 };

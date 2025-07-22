@@ -20,8 +20,8 @@ const dark = Generators.observe((notify) => {
 ```js
 // Algunas constantes
 const colors = {
-  frame: dark ? "#d0d4d6ff" : "#39484d",
-  highlight: dark ? "#ff3232ff" : "#ff0000ff",
+  frame: dark ? "#b2b7baff" : "#39484d",
+  highlight: dark ? "#ffffffff" : "#116379ff",
 };
 const sinMilitancia = "Ninguno";
 const mas =
@@ -250,7 +250,7 @@ const plotDetalle = Plot.plot({
       x: "i",
       y: "partido_listas",
       stroke: colors.highlight,
-      strokeOpacity: 0.5,
+      strokeOpacity: 0.6,
       strokeWidth: 1.5,
       insetTop: 24,
       insetBottom: -1,

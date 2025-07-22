@@ -1,12 +1,20 @@
-main>p {
+:root {
+  --frame: #39484d;
+  --highlight: #177b97ff;
+}
+
+main > p {
   font-size: 1rem;
 }
 
 .grafico {
   .mensaje {
     max-width: 100%;
-    opacity: .8;
-    font-size: .8rem;
+    opacity: 0.8;
+    font-size: 0.8rem;
+  }
+  .text_highlight {
+    text-decoration: 1px dotted underline var(--highlight);
   }
 }
 
@@ -16,12 +24,14 @@ main>p {
   gap: 5px;
   height: 150px;
   font-family: sans-serif;
-  font-size: .8rem;
+  font-size: 0.8rem;
   .nombre {
     font-weight: bold;
   }
-  .personal, .en_lista, .en_padron {
-    opacity: .6
+  .personal,
+  .en_lista,
+  .en_padron {
+    opacity: 0.6;
   }
   .partido {
     font-weight: bold;
@@ -30,6 +40,13 @@ main>p {
 
 .footer {
   font: 12px var(--sans-serif);
-  font-size: .8rem;
+  font-size: 0.8rem;
   color: var(--theme-foreground-faint);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --frame: #b2b7baff;
+    --highlight: #ffffffff;
+  }
 }
